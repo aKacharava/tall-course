@@ -2,10 +2,10 @@
 
 namespace Database\Factories;
 
+use App\Models\Subscriber;
 use Illuminate\Database\Eloquent\Factories\Factory;
-
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Subscriber>
+ * @extends Factory<Subscriber>
  */
 class SubscriberFactory extends Factory
 {
@@ -17,7 +17,8 @@ class SubscriberFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'email' => fake()->unique()->safeEmail(),
+            'email_verified_at' => now(),
         ];
     }
 }
