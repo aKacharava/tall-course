@@ -56,8 +56,12 @@
                 placeholder="Email address"
             />
             <span class="text-gray-100 text-xs">
-                    We will send you a confirmation email.
-                </span>
+                {{
+                    $errors->has('email')
+                    ? $errors->first('email')
+                    : 'We will send you a confirmation email.'
+                }}
+            </span>
             <x-secondary-button
                 wire:click="subscribe"
                 class="px-5 py-3 mt-5 w-80 !bg-blue-500 hover:!bg-blue-700 justify-center"
