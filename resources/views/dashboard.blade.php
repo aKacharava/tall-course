@@ -15,7 +15,9 @@
                     <div>
                         <span>Manage subscribers</span>
                         <ul class="list-disc">
-                            <li class="text-blue-500 hover:underline cursor-pointer">Test</li>
+                            <li class="text-blue-500 hover:underline cursor-pointer">
+                                <a href="{{ route('subscribers.all') }}">Manage subscribers</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
