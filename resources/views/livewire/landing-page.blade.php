@@ -1,7 +1,7 @@
 <div
     x-data="{
-        showSubscribe: false,
-        showSuccess: false
+        showSubscribe: $wire.entangle('showSubscribe'),
+        showSuccess: $wire.entangle('showSuccess')
     }"
     class="flex flex-col bg-indigo-900 w-full h-screen"
 >
