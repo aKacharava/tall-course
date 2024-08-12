@@ -40,6 +40,7 @@
     <x-modal
         trigger="showSubscribe"
         class="bg-pink-500"
+        x-cloak
     >
         <p class="text-white text-5xl font-extrabold text-center">
             Let's do it!
@@ -66,13 +67,17 @@
                 wire:click="subscribe"
                 class="px-5 py-3 mt-5 w-80 !bg-blue-500 hover:!bg-blue-700 justify-center"
             >
-                Get in
+                <i class="fi fi-br-loading animate-spin" wire:loading wire:target="subscribe"></i>
+                <span wire:loading.remove wire:target="subscribe">
+                    Subscribe
+                </span>
             </x-secondary-button>
         </form>
     </x-modal>
     <x-modal
         trigger="showSuccess"
         class="bg-green-500"
+        x-cloak
     >
         <p class="animate-pulse text-white text-9xl font-extrabold text-center">
             &check;
