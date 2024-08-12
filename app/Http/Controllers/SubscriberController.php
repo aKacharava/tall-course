@@ -20,7 +20,6 @@ class SubscriberController extends Controller
 
     public function all()
     {
-        return view('subscribers.all')
-            ->with('subscribers', Subscriber::all());
+        return view('subscribers.all');
     }
 }
